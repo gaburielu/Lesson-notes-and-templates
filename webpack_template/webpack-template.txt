@@ -1,0 +1,24 @@
+1. copy everything from this file
+2. delete package.json & package-lock.json
+3. run "npm init -y" to create a new package.json
+4. change the script in package.json to this 
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",      //"npm run watch" to starts webpack in watch mode 
+    "build": "webpack",
+    "pushToGHPages": "git subtree push --prefix dist origin gh-pages" //to push to GitHub
+  }
+5. change the '"main": "index.js",' to this   '"private": "true",' dont forget the comma and double tick //in order not to publish the code in npm registry
+6. run "npm i -D webpack webpack-cli" to create a new package-lock.json
+7. "npm i -D style-loader css-loader"
+8. "npm i -D html-webpack-plugin"
+9. put in your index.js
+import "./style.css";
+import "./normalize.css";
+
+
+
+
+
+101. Delete this file.
