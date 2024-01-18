@@ -1,6 +1,8 @@
 let array1 = [3, 2, 1, 13, 8, 5, 0, 1];
 let array2 = [105, 79, 100, 110];
 
+////////////////////////////////Merge Sort////////////////////////////////
+
 function mergeSort(arr) {
   if (arr.length < 2) {
     return arr;
@@ -8,8 +10,6 @@ function mergeSort(arr) {
   const mid = Math.floor(arr.length / 2);
   const left = arr.slice(0, mid);
   const right = arr.slice(mid);
-
-
   return merge(mergeSort(left), mergeSort(right));
 }
 
