@@ -7,6 +7,20 @@ class coordinate {
   }
 }
 
+function validInput(arr) {
+  if (
+    arr.length !== 2 ||
+    arr[0] < 0 ||
+    arr[0] > 7 ||
+    arr[1] < 0 ||
+    arr[1] > 7 ||
+    !arr.every(Number.isInteger)
+  ) {
+    return false;
+  }
+  return true;
+}
+
 function possibleMove(point) {
   let move = [
     [1, 2],
@@ -24,12 +38,7 @@ function possibleMove(point) {
       point.x + move[i][0],
       point.y + move[i][1]
     );
-    if (
-      newLocation.x >= 0 &&
-      newLocation.x <= 7 &&
-      newLocation.y >= 0 &&
-      newLocation.y <= 7
-    ) {
+    if (validInput(newLocation.point)) {
       newLocation.previous = point;
       result.push(newLocation);
     }
@@ -61,20 +70,6 @@ function levelOrder(start, end) {
     if (current.x == end.x && current.y == end.y) {
       return current;
     }
-  }
-}
-
-function validInput(arr) {
-  if (arr.length !== 2) {
-    return false;
-  }
-  if (arr[0] < 0 || arr[0] > 7 || arr[1] < 0 || arr[1] > 7) {
-    return false;
-  }
-  if (!arr.every(Number.isInteger)) {
-    return false;
-  } else {
-    return true;
   }
 }
 
@@ -110,4 +105,4 @@ function log(x) {
 // let end = new coordinate(7, 7);
 // log(levelOrder(start, end));
 
-knightMoves([0, 0], [1, 0]);
+knightMoves([0, 0], [7, 7]);
