@@ -1,0 +1,2 @@
+1. use the following command to see the commit history and understand the changes that were merged:
+git log --graph --oneline --all
