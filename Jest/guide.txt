@@ -1,0 +1,14 @@
+1. npm init -y //to initialize json file
+2. npm i --save-dev jest //install jest as dev dependency
+3. change the script file in json to
+  "scripts": {
+    "test": "jest"
+  }
+4. const {function name} = require ("./jestTest.js"); //put this inside your "fileName".test.js file
+5. npm test
+
+
+
+
+in Using Babel
+1. npm install --save-dev babel-jest 
