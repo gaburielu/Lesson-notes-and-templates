@@ -1,0 +1,30 @@
+:root {
+  /* Font Sizes */
+  --font-size-tiny: clamp(1rem, 1vw, 1.5rem);
+  --font-size-small: clamp(0.875rem, 1.2vw, 1.5rem);
+  --font-size-medium: clamp(1rem, 1.5vw, 2rem);
+  --font-size-large: clamp(1.125rem, 2vw, 2.5rem);
+  --font-size-xlarge: clamp(1.25rem, 2.5vw, 3rem);
+  --font-size-xxlarge: clamp(1.5rem, 3vw, 4rem);
+
+  /* Line Heights */
+  --line-height-tight: clamp(1.2, 1.2, 1.5);
+  --line-height-normal: clamp(1.5, 1.5, 2);
+  --line-height-loose: clamp(1.8, 2, 2.5);
+
+  /* Spacing */
+  --spacing-xxsmall: clamp(0.25rem, 0.5vw, 1rem);
+  --spacing-xsmall: clamp(0.5rem, 0.75vw, 1.5rem);
+  --spacing-small: clamp(1rem, 1vw, 2rem);
+  --spacing-medium: clamp(1.5rem, 1.5vw, 3rem);
+  --spacing-large: clamp(2rem, 2vw, 4rem);
+  --spacing-xlarge: clamp(3rem, 3vw, 6rem);
+  --spacing-xxlarge: clamp(4rem, 4vw, 8rem);
+
+  /* Colors */
+  --color-primary: #0e5673;
+  --color-secondary: #a64208;
+  --color-accent: #591902;
+  --color-background: #80a7bf;
+  --color-text: #0e5673;
+}

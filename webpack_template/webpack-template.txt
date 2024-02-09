@@ -17,7 +17,7 @@
 import "./style.css";
 import "./normalize.css";
 
-
+10. git subtree push --prefix dist origin gh-pages //to push
 
 
 

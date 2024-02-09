@@ -1,0 +1,42 @@
+Accessibilty 
+
+1. Common screen size
+    a. Monitor - 1920w x 1080h px
+    b. Tablet  - 768w  x 1024h px
+    c. Mobile  - 375w  x 667 h px
+
+
+2. Use Semantic HTML:
+    a. Use H1 to H6 appropriately according to the importance of the content. 
+    b. Landmarks: <aside>, <footer>, <form>, <header>, <main>, <nav> & <section>
+
+
+3. Provide Descriptive Alt Text:
+    a. no need alt text if the asset is not of importance
+    b. 
+
+
+4. Ensure Keyboard Accessibility:
+
+
+5. Contrast and Color Considerations:
+    a. Use Lighthouse for chrome to check
+    b. Or use Devtool in the color picker in CSS
+
+
+6. Readable Font Sizes:
+    a. min of 18px
+
+
+7. Skip to Content Links:
+
+
+8. Form Accessibility:
+
+
+9. Test with Accessibility Tools:
+
+
+10. Implement ARIA Roles and Attributes:
+    a. Check next text file
+

@@ -12,3 +12,75 @@
 
 in Using Babel
 1. npm install --save-dev babel-jest 
+
+
+
+
+
+Here's a basic template for using jest.mock:
+
+Assume you have a module named exampleModule.js with the following content:
+
+javascript
+Copy code
+// exampleModule.js
+
+const fetchData = async () => {
+  // Some logic that fetches data
+};
+
+const processData = (data) => {
+  // Some logic that processes the data
+  return processedData;
+};
+
+export { fetchData, processData };
+Now, you want to test another module (moduleToTest.js) that uses exampleModule. You want to mock fetchData to control its behavior during testing. Here's how you can use jest.mock:
+
+javascript
+Copy code
+// moduleToTest.js
+
+import { fetchData, processData } from './exampleModule';
+
+const processDataAndLog = async () => {
+  const data = await fetchData();
+  const processedData = processData(data);
+  console.log('Processed Data:', processedData);
+};
+
+export default processDataAndLog;
+And the corresponding test file (moduleToTest.test.js):
+
+javascript
+Copy code
+// moduleToTest.test.js
+
+import processDataAndLog from './moduleToTest';
+import { fetchData, processData } from './exampleModule';
+
+// Mocking the exampleModule
+jest.mock('./exampleModule');
+
+describe('processDataAndLog', () => {
+  it('should process data and log the result', async () => {
+    // Set up a mock implementation for fetchData
+    fetchData.mockResolvedValue('mocked data');
+
+    // Set up a mock implementation for processData
+    processData.mockReturnValue('mocked processed data');
+
+    // Run the function under test
+    await processDataAndLog();
+
+    // Assertions
+    expect(fetchData).toHaveBeenCalled();
+    expect(processData).toHaveBeenCalledWith('mocked data');
+  });
+});
+In this example:
+
+jest.mock('./exampleModule') tells Jest to replace the entire exampleModule with mocked versions of its functions.
+fetchData.mockResolvedValue('mocked data') sets up a mock for the fetchData function to resolve with the specified value.
+processData.mockReturnValue('mocked processed data') sets up a mock for the processData function to return the specified value.
+This way, when you run tests, the actual functions from exampleModule are not executed, and instead, the mocked implementations are used, allowing you to control their behavior for testing purposes.
