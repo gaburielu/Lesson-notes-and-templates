@@ -1,0 +1,72 @@
+:root {
+  /* Font Sizes */
+  --font-size-tiny: clamp(1rem, 1vw, 1.5rem);
+  --font-size-small: clamp(0.875rem, 1.2vw, 1.5rem);
+  --font-size-medium: clamp(1rem, 1.5vw, 2rem);
+  --font-size-large: clamp(1.125rem, 2vw, 2.5rem);
+  --font-size-xlarge: clamp(1.25rem, 2.5vw, 3rem);
+  --font-size-xxlarge: clamp(1.5rem, 3vw, 4rem);
+
+  /* Line Heights */
+  --line-height-tight: clamp(1.2, 1.2, 1.5);
+  --line-height-normal: clamp(1.5, 1.5, 2);
+  --line-height-loose: clamp(1.8, 2, 2.5);
+
+  /* Spacing */
+  --spacing-xxsmall: clamp(0.25rem, 0.5vw, 1rem);
+  --spacing-xsmall: clamp(0.5rem, 0.75vw, 1.5rem);
+  --spacing-small: clamp(1rem, 1vw, 2rem);
+  --spacing-medium: clamp(1.5rem, 1.5vw, 3rem);
+  --spacing-large: clamp(2rem, 2vw, 4rem);
+  --spacing-xlarge: clamp(3rem, 3vw, 6rem);
+  --spacing-xxlarge: clamp(4rem, 4vw, 8rem);
+}
+
+/* USE THIS 2 ONLY */
+
+@media (max-width: 376px) {
+  /* Styles for mobile phones and tablet */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+}
+
+/* THIS IS FOR MORE SPECIFIC SITE */
+
+@media (min-width: 1024px) {
+  /* min width refer to any screen wider than 1024px */
+  /* Styles for desktops */
+}
+
+/* DARK/LIGHT MODE */
+:root {
+  /* Colors */
+  --color-primary-light: var(#45c4b0);
+  --color-accent-light: var(#9aeba3);
+  --color-background-light: var(#dafdba);
+  --color-text-light: var(#012030);
+
+  --color-primary-dark: var(#45c4b0);
+  --color-accent-dark: var(#13678a);
+  --color-background-dark: var(#012030);
+  --color-text-dark: var(#dafdba);
+}
+
+@media (prefers-color-scheme: dim) {
+  :root {
+    --color-primary-light: var(--color-primary-dark);
+    --color-accent-light: var(--color-accent-dark);
+    --color-background-light: var(--color-background-dark);
+    --color-text-light: var(--color-text-dark);
+  }
+}
+
+@media (prefers-color-scheme: bright) {
+  :root {
+    --color-primary-dark: var(--color-primary-light);
+    --color-accent-dark: var(--color-accent-light);
+    --color-background-dark: var(--color-background-light);
+    --color-text-dark: var(--color-text-light);
+  }
+}

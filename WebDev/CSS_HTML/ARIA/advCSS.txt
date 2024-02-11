@@ -4,7 +4,8 @@ Accessibilty
     a. Monitor - 1920w x 1080h px
     b. Tablet  - 768w  x 1024h px
     c. Mobile  - 375w  x 667 h px
-
+    refer to common.css for template   
+    
 
 2. Use Semantic HTML:
     a. Use H1 to H6 appropriately according to the importance of the content. 
