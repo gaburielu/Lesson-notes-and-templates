@@ -1,0 +1,64 @@
+Assuming that you have already created a React project with Vite, in the project directory
+
+1. npm install vitest --save-dev
+
+2. in package.json
+{
+  ...
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+  //  "test": "vitest",
+    "preview": "vite preview"
+  },
+  ...
+}
+
+3. create a test directory in src, create a test file "App.test.jsx"
+import { describe, it, expect } from 'vitest';
+
+describe('something truthy and falsy', () => {
+  it('true to be true', () => {
+    expect(true).toBe(true);
+  });
+
+  it('false to be false', () => {
+    expect(false).toBe(false);
+  });
+});
+
+4. run "npm run test" to check if the test is running
+
+5. npm install jsdom --save-dev                            //VITEST WITH REACT TESTING LIBRARY
+
+6. npm install @testing-library/react @testing-library/jest-dom --save-dev
+
+7. npm install @testing-library/user-event --save-dev
+
+8. add a setup file "setup.js" in the test directory (tests/setup.js), add this in it
+import { expect, afterEach } from 'vitest';
+import { cleanup } from '@testing-library/react';
+import * as matchers from "@testing-library/jest-dom/matchers";
+
+expect.extend(matchers);
+
+afterEach(() => {
+  cleanup();
+});
+
+
+9. in vite.config file
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './tests/setup.js',
+  },
+});
+
+

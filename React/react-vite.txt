@@ -1,0 +1,15 @@
+Scaffolding Your First Vite Project
+1. create vite@latest <name of your project> -- --template react  //this in vs code
+
+or 
+
+1. npx create-vite Project-Memory-Card --template react   //this in bash terminal
+
+
+cd <name of project>
+npm install
+npm run dev
+
+3. npm install react-router-dom  //for routing SPA
+
+
