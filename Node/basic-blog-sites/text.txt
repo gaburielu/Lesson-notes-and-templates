@@ -1,4 +1,0 @@
-MongoDB Database username: tutorial
-MongoDB Database password: CEaWLbfGxfwIiza6
-
-mongodb+srv://tutorial:<password>@atlascluster.ksvakm2.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster
