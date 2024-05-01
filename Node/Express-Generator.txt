@@ -1,0 +1,10 @@
+1. npm install -g express-generator
+
+2. express --view=ejs <my-express-app> // <my-express-app> as the name of your project
+using EJS as viewing engine
+
+3. npm install
+install all the dependencies required by your Express application
+
+4. npm start
+to start the server

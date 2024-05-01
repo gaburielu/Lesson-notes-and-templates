@@ -1,0 +1,11 @@
+Common Status Code
+1. 200 - OK
+2. 301 - Resources moved
+3. 404 - Not found
+4. 500 - Internal Server error
+
+100 range - informational response
+200 range - success codes
+300 range - codes for redirects
+400 range - user or client error codes
+500 range - server error codes
