@@ -1,0 +1,1 @@
+MongoDB URI = mongodb+srv://<your name>:<your password>@atlascluster.ksvakm2.mongodb.net/<collection name>?retryWrites=true&w=majority&appName=AtlasCluster
